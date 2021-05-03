@@ -1,6 +1,9 @@
-/* eslint-disable */
-declare module '*.vue' {
-  import type { DefineComponent } from 'vue'
-  const component: DefineComponent<{}, {}, any>
-  export default component
+import VueRouter from "vue-router";
+
+declare module "*.vue" {
+  import Vue from "vue";
+  export default Vue;
+  interface Vue {
+    $router: VueRouter;
+  }
 }
