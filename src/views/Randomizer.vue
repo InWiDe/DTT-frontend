@@ -3,7 +3,7 @@
     <div class="container">
       <div class="random-character">
         <img
-          v-if="character"
+          v-if="character.image"
           v-bind:src="character.image"
           alt="Character image"
           class="img-rounded"
@@ -30,7 +30,7 @@ import CardsComponent from "@/components/HomePage/CardsComponent.vue";
   },
 })
 export default class Randomizer extends Vue {
-  private character: unknown;
+  private character: unknown = [];
 
   //Function to generate random number
   private getRandomArbitrary(min, max): number {

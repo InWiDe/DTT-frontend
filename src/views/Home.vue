@@ -19,7 +19,7 @@ import CardsComponent from "@/components/HomePage/CardsComponent.vue";
 })
 //This is home view that can be found at http://localhost:8080/
 export default class Home extends Vue {
-  private characters: unknown;
+  private characters: unknown = [];
   private componentKey = 0;
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   mounted() {
